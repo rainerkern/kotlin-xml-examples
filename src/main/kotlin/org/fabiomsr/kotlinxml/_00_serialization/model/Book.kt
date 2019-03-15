@@ -9,8 +9,7 @@ import org.simpleframework.xml.Root
  * Created by fabiomsr on 2/7/16.
  */
 @Root
-data class Book( @field:Element var title: String,
-                 @field:Attribute var pages: Int) {
-
-    constructor( ) : this("", 0) {}
-}
+data class Book(
+    @field:Element var title: String = "",
+    @field:Attribute var pages: Int = 0
+)
